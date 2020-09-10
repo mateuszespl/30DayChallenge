@@ -1,0 +1,49 @@
+:root {
+    --base: #FFC500;
+    --blur: 0px;
+    --top: 0px;
+    --left: 0px;
+}
+
+body {
+    text-align: center;
+    background: #193549;
+    color: white;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.controls {
+    margin-bottom: 50px;
+}
+
+input {
+    width: 100px;
+}
+
+.hl {
+    color: var(--base)
+}
+
+img {
+    position: relative;
+    filter: blur(var(--blur));
+    top: var(--top);
+    left: var(--left)
+}
+
+div.img {
+    position: relative;
+}
+
+div.img::before {
+    content: "";
+    display: block;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    background: var(--base);
+    transform: translateX(-50%);
+    left: 50%;
+}
